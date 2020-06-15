@@ -1,10 +1,10 @@
 {
-    "name": "BlueprintLab_Bud18",
-  "version": "0.18.0",
+  "name": "BlueprintLab_design",
+  "version": "0.18.27",
   "factorio_version": "0.18",
-  "title": "The Blueprint Lab - Schoos",
-  "author": "Bud, Likos, Schoos",
+  "title": "The Blueprint Lab",
+  "author": "Bud, Likos, Schoos, daniel90c",
   "description": "Enter your lab to design your blueprints.",
-  "homepage": "",
-  "dependencies": ["base"]
+  "homepage": "https://gitlab.com/daniel90c/blueprintlab_design",
+  "dependencies": ["base >= 0.18.27"]
 }

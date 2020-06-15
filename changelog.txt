@@ -1,3 +1,11 @@
+Version: 0.18.27
+Date: 2020/06/15
+   Major Features
+     - Update for <0.18.27+
+     - Spanish translations
+     - New thumbnail.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.18.0
 Date: 2020/02/15
    Major Features

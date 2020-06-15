@@ -1,6 +1,7 @@
 require "util"
 
-LabRadius = 8 --in chunks
+
+LabRadius = 8--in chunks
 LabNameStub = "BPL_TheLab"
 
 function LabName(force)
@@ -31,8 +32,13 @@ function DestroyEntity(entity, player_index)
     if (entity.type == "loader") then
         ClearTransportLines(entity, 2)
     end
+	
+    -- script.raise_event(defines.events.on_pre_player_mined_item, 
+        -- {player_index = player_index, entity = entity}) 
 
-    script.raise_event(defines.events.on_pre_player_mined_item, 
+    -- entity.destroy()
+
+    script.raise_event(defines.events.script_raised_destroy,
         {player_index = player_index, entity = entity}) 
 
     entity.destroy()
@@ -64,6 +70,25 @@ end
 
 EmptyBlueprintString = "0eNqrrgUAAXUA+Q=="
 
+-- function ReviveEntity(entity, player_index)
+    -- if entity.type == "entity-ghost" then
+        -- _, revived, request = entity.revive({true})
+        -- if not revived then return end
+
+        -- if request then
+            -- for requestName, requestCount in pairs(request.item_requests) do
+                -- request.proxy_target.insert {name = requestName, count = requestCount}
+            -- end
+            -- request.destroy()
+        -- end
+
+        -- script.raise_event(defines.events.on_built_entity, 
+            -- {player_index = player_index, created_entity = revived})
+    -- elseif entity.type == "tile-ghost" then
+        -- entity.revive()
+    -- end
+-- end
+
 function ReviveEntity(entity, player_index)
     if entity.type == "entity-ghost" then
         _, revived, request = entity.revive({true})
@@ -75,9 +100,9 @@ function ReviveEntity(entity, player_index)
             end
             request.destroy()
         end
-
-        script.raise_event(defines.events.on_built_entity, 
-            {player_index = player_index, created_entity = revived})
+		
+        script.raise_event(defines.events.script_raised_built, 
+			{player_index = player_index, entity = revived})
     elseif entity.type == "tile-ghost" then
         entity.revive()
     end
