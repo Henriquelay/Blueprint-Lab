@@ -2,9 +2,9 @@
   "name": "BlueprintLab_design",
   "version": "0.18.27",
   "factorio_version": "0.18",
-  "title": "The Blueprint Lab",
+  "title": "The Blueprint Designer Lab",
   "author": "Bud, Likos, Schoos, daniel90c",
-  "description": "Enter your lab to design your blueprints.",
+  "description": "Enter your lab to design your blueprints. Mod updated for the 4th by daniel90c. Please be gentle, the lab guy has been to places.",
   "homepage": "https://gitlab.com/daniel90c/blueprintlab_design",
   "dependencies": ["base >= 0.18.27"]
 }
