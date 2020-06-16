@@ -1,8 +1,6 @@
 require "logic"
 require "init-lab"
 
-function clear_bp_editor_button(player)
-    
 function CreateGui(player_index)
 
     local player = game.players[player_index]
