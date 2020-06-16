@@ -6,7 +6,7 @@ function CreateGui(player_index)
     local player = game.players[player_index]
     local playerData = global[player_index]
     if player.gui.left.add {type = "flow", name = "BPL_Flow"} then
-        player.gui.left.destroy()
+        player.gui.left.clear()
       end
       playerData.flow = player.gui.left.add {type = "flow", name = "BPL_Flow"}
     playerData.button = playerData.flow.add {type = "button", name = "BPL_LabButton", 
