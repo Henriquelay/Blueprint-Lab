@@ -40,6 +40,7 @@ function ToTheLab(player_index)
 	player.force.recipes["electric-energy-interface"].enabled = true
 	player.force.recipes["infinity-chest"].enabled = true
 	player.force.recipes["infinity-pipe"].enabled = true
+	player.force.recipes["loader"].enabled = true
 
     playerData.inTheLab = true
 end
