@@ -41,6 +41,9 @@ function ToTheLab(player_index)
 	player.force.recipes["infinity-chest"].enabled = true
 	player.force.recipes["infinity-pipe"].enabled = true
 	player.force.recipes["loader"].enabled = true
+    player.force.recipes["fast-loader"].enabled = true
+    player.force.recipes["express-loader"].enabled = true
+    
 
     playerData.inTheLab = true
 end
@@ -58,6 +61,10 @@ function ToTheWorld(player_index)
 	player.force.recipes["electric-energy-interface"].enabled = false
 	player.force.recipes["infinity-chest"].enabled = false
 	player.force.recipes["infinity-pipe"].enabled = false
+    player.force.recipes["loader"].enabled = false
+    player.force.recipes["fast-loader"].enabled = false
+    player.force.recipes["express-loader"].enabled = false
+
 
     DropBlueprints(player, player.get_main_inventory())
     local blueprint = ReturnBlueprintExport(player)
