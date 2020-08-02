@@ -81,9 +81,13 @@ function ToTheWorld(player_index)
 end
 
 function SyncTechnologies(old_force, new_force)
-	for tech, _ in pairs(game.technology_prototypes) do
-		new_force.technologies[tech].researched = old_force.technologies[tech].researched
-	end
+    if settings.global["blueprint-lab-design-allow-all-technology"].value then
+        new_force.research_all_technologies()
+    else
+        for tech, _ in pairs(game.technology_prototypes) do
+            new_force.technologies[tech].researched = old_force.technologies[tech].researched
+        end
+    end
 end
 
 function DropBlueprints(player, inventory)

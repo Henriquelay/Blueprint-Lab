@@ -87,9 +87,4 @@ function OnBuiltEntity(event)
         ReviveEntity(entity, event.player_index)
         return
     end
-
-    if entity.type == "lab" then
-        DisableLab(entity)
-        return
-    end
 end

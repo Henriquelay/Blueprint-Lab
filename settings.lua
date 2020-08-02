@@ -11,4 +11,10 @@ data:extend({
         setting_type = "startup",
         default_value = "construction-robotics"
     },
+    {
+        type = "bool-setting",
+        name = "blueprint-lab-design-allow-all-technology",
+        setting_type = "runtime-global",
+        default_value = false
+    },
 })

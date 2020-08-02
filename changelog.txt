@@ -3,6 +3,7 @@ Version: 0.18.311
 Date: 2020-08-01
      - Make production/construction inside the lab not show up on statistics outside.
      - Add option to lock access behind research.
+     - Add option to unlock all research while in the lab.
 
 ---------------------------------------------------------------------------------------------------
 Version: 0.18.310
