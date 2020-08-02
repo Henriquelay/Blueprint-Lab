@@ -36,12 +36,17 @@ function ToTheLab(player_index)
 
     BringBlueprint(player, playerData.character.cursor_stack)
 
+	playerData.force = player.force.name
+	player.force = LabName(player.force)
+	SyncTechnologies(game.forces[playerData.force], game.forces[player.force.name])
+
     player.cheat_mode = true
 	player.force.recipes["electric-energy-interface"].enabled = true
 	player.force.recipes["infinity-chest"].enabled = true
 	player.force.recipes["infinity-pipe"].enabled = true
 
     playerData.inTheLab = true
+	
 end
 
 function ToTheWorld(player_index)
@@ -52,6 +57,11 @@ function ToTheWorld(player_index)
         player.print "invalid operation, player already in the world."
         return
     end
+	
+	if playerData.force ~= nil then
+		player.force = playerData.force
+		playerData.force = nil
+	end
 
     player.cheat_mode = false
 	player.force.recipes["electric-energy-interface"].enabled = false
@@ -68,6 +78,12 @@ function ToTheWorld(player_index)
     ReturnBlueprintImport(player, blueprint)
 
     playerData.inTheLab = false
+end
+
+function SyncTechnologies(old_force, new_force)
+	for tech, _ in pairs(game.technology_prototypes) do
+		new_force.technologies[tech].researched = old_force.technologies[tech].researched
+	end
 end
 
 function DropBlueprints(player, inventory)

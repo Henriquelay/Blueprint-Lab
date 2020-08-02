@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.18.311
+Date: 2020-08-01
+     - Make production/construction inside the lab not show up on statistics outside.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.18.310
 Date: 2020-06-15
      - possible fix bug report by NiteAngyl to "Gui element with name BPL_Flow already present in the parent element." on gui.lua
