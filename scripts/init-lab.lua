@@ -2,21 +2,21 @@ require "common"
 
 function InitLab(force)
     labName = LabName(force)
-    if game.surfaces[labName] then
-        return
+    if not game.surfaces[labName] then
+        local surface = game.create_surface(labName, {width = 2*LabRadius*32, height = 2*LabRadius*32})
+        surface.always_day = true
+
+        ChunkLab(surface)
+        TileLab(surface)
+        EquipLab(surface, force)
     end
-
-    --game.print "creating lab"
-
-    local surface = game.create_surface(labName, {width = 2*LabRadius*32, height = 2*LabRadius*32})
-    --surface.daytime = .5
-    surface.always_day = true
-
-    ChunkLab(surface)
-    TileLab(surface)
-    EquipLab(surface, force)
-
-    --game.print "lab created"
+    
+    if not game.forces[labName] then
+        local new_force = game.create_force(labName)
+        for _, entity in pairs(game.surfaces[labName].find_entities_filtered{force = force.name}) do
+        entity.force = new_force
+        end
+    end
 end
 
 function ChunkLab(surface)
