@@ -4,10 +4,10 @@ require "init-lab"
 function OnLabButton(player_index)
     local player = game.players[player_index]
     local playerData = global[player_index]
-
+    
     if playerData.inTheLab then
         ToTheWorld(player_index)
-    else
+    elseif playerData.isUnlocked then
         InitLab(player.force)
         ToTheLab(player_index)
     end
