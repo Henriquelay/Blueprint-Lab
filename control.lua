@@ -46,7 +46,7 @@ script.on_configuration_changed(function(event)
     
     for _, player in pairs(game.players) do
         InitIsUnlocked(player.index)
-        UpdateGui(player.index)
+        CreateGui(player.index)
     end
 end)
 

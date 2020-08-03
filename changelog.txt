@@ -1,4 +1,8 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.18.312
+Date: 2020-08-01 again
+     - Fix GUI crash after update.
+---------------------------------------------------------------------------------------------------
 Version: 0.18.311
 Date: 2020-08-01
      - Make production/construction inside the lab not show up on statistics outside.
