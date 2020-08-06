@@ -29,7 +29,13 @@ function ToTheLab(player_index)
         player.print "invalid operation, player already in the lab."
         return
     end
+    
+    if player.character == nil then
+        player.print "No body, no lab. Them's the rules."
+        return
+    end
 
+    player.character.destructible = false
     playerData.character = player.character
 	player.set_controller({type = defines.controllers.god})
     player.teleport({0, 0}, LabName(player.force))
@@ -82,6 +88,7 @@ function ToTheWorld(player_index)
     player.teleport({0, 0}, playerData.character.surface)
 	player.set_controller({type = defines.controllers.character, character = playerData.character})
     playerData.character = nil
+    player.character.destructible = true
 
     ReturnBlueprintImport(player, blueprint)
 
@@ -146,8 +153,6 @@ function ClearLab(player_index)
         player.print "invalid operation, player not in the lab."
         return
     end
-
-    --player.print "clearing the lab"
 
     for _, entity in pairs(player.surface.find_entities()) do
 		DestroyEntity(entity, player_index)

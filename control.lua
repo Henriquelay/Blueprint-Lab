@@ -64,10 +64,24 @@ script.on_load(function()
             end
         end)
     end
+    
+    if settings.global["blueprint-lab-design-disable-fog"].value then
+        script.on_nth_tick(300, function(event) ChartLabs() end)
+    end
 end)
 
 script.on_event(defines.events.on_player_created, function(event)
     InitPlayer(event.player_index)
+end)
+
+script.on_event(defines.events.on_runtime_mod_setting_changed, function(event)
+    if event.setting == "blueprint-lab-design-disable-fog" then
+        if settings.global["blueprint-lab-design-disable-fog"].value then
+            script.on_nth_tick(300, function(event) ChartLabs() end)
+        else
+            script.on_nth_tick(300, nil)
+        end
+    end
 end)
 
 --gui

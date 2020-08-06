@@ -3,42 +3,24 @@ require "common"
 function InitLab(force)
     labName = LabName(force)
     if not game.surfaces[labName] then
-        local surface = game.create_surface(labName, {width = 2*LabRadius*32, height = 2*LabRadius*32})
+        local surface = game.create_surface(labName, {
+            default_enable_all_autoplace_controls = false,
+            cliff_settings = {
+                cliff_elevation_0 = 1024,
+            },
+        })
         surface.always_day = true
+        surface.generate_with_lab_tiles = true
 
-        ChunkLab(surface)
-        TileLab(surface)
         EquipLab(surface, force)
     end
     
     if not game.forces[labName] then
         local new_force = game.create_force(labName)
         for _, entity in pairs(game.surfaces[labName].find_entities_filtered{force = force.name}) do
-        entity.force = new_force
+            entity.force = new_force
         end
     end
-end
-
-function ChunkLab(surface)
-    for i = -LabRadius, LabRadius do
-        for j = -LabRadius, LabRadius do
-            surface.set_chunk_generated_status({i, j}, defines.chunk_generated_status.entities)
-        end
-    end
-end
-
-function TileLab(surface)
-    tiles = {}
-    for i = -LabRadius*32, LabRadius*32 - 1 do
-        for j = -LabRadius*32, LabRadius*32 - 1 do
-            if (i + j) % 2 == 0 then
-                table.insert(tiles, {name = "lab-dark-1", position = {i, j}})
-            else
-                table.insert(tiles, {name = "lab-dark-2", position = {i, j}})
-            end
-        end
-    end
-    surface.set_tiles(tiles)
 end
 
 function EquipLab(surface, force)
@@ -53,4 +35,16 @@ function EquipLab(surface, force)
 
     mediumPole = surface.create_entity {name = "big-electric-pole", position = {0, -2}, force = force}
     mediumPole.minable = true
+end
+
+function ChartLabs()
+    if settings.global["blueprint-lab-design-disable-fog"].value then
+        local forces_checked = {}
+        for _, player in pairs(game.players) do
+            if IsLab(player.surface) and not forces_checked[player.force.name] then
+                player.force.chart_all(player.surface)
+                forces_checked[player.force.name] = true
+            end
+        end
+    end
 end
