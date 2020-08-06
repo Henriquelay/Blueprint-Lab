@@ -22,17 +22,14 @@ function UpdateGui(player_index)
 
     if playerData.inTheLab then
         playerData.button.caption = {"bpl.LabButtonReturn"}
-        --playerData.flow.visible = true
         playerData.button.visible = true
         playerData.clearButton.visible = true
     else
         if playerData.isUnlocked then
             playerData.button.caption = {"bpl.LabButton"}
-            --playerData.flow.visible = true
             playerData.button.visible = true
             playerData.clearButton.visible = false
         else
-            --playerData.flow.visible = false
             playerData.button.visible = false
             playerData.clearButton.visible = false
         end

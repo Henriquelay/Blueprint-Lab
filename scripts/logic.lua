@@ -139,8 +139,6 @@ function ClearLab(player_index)
         return
     end
 
-    --player.print "clearing the lab"
-
     for _, entity in pairs(player.surface.find_entities()) do
 		DestroyEntity(entity, player_index)
     end

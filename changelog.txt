@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.18.313
+Date: 2020-08-05
+     - Make lab surface infinite.
+     - Add option to remove fog of war while in the lab. This lowers performance, but allows making and placing very large blueprints from map view.
+---------------------------------------------------------------------------------------------------
 Version: 0.18.312
 Date: 2020-08-01 again
      - Fix GUI crash after update.
