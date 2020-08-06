@@ -13,7 +13,7 @@ for _, surface in pairs(game.surfaces) do
         
         -- pre-infinite gen generated a partial border of empty chunks, so 
         -- regenerate those in order to make the map whole again
-        for i = -8, 8 do
+        for i = -7, 8 do
             surface.delete_chunk({i, 8})
             surface.delete_chunk({8, i})
         end
