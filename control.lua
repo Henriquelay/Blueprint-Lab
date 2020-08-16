@@ -42,12 +42,11 @@ script.on_configuration_changed(function(event)
         and event.mod_changes["TheBlueprintLab_bud"].old_version == "0.0.1" then
         ClearVersion001()
         InitAllPlayers()
-    end
-    
     for _, player in pairs(game.players) do
         InitIsUnlocked(player.index)
         CreateGui(player.index)
     end
+end
 end)
 
 script.on_load(function()

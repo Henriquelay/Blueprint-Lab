@@ -9,11 +9,16 @@ function CreateGui(player_index)
     end
     playerData.flow = player.gui.left["BPL_Flow"]
     playerData.flow.clear()
-    playerData.button = playerData.flow.add {type = "button", name = "BPL_LabButton", 
-        caption = {"bpl.LabButton"}, tooltip = {"bpl.LabButtonTooltip"}}
-    playerData.clearButton = playerData.flow.add {type = "button", name = "BPL_ClearButton", 
-        caption = {"bpl.ClearButton"}, tooltip = {"bpl.ClearButtonTooltip"}}
-    
+    playerData.button = playerData.flow.add {
+        type = "button", name = "BPL_LabButton",
+        caption = {"bpl.LabButton"},
+        tooltip = {"bpl.LabButtonTooltip"},
+        style = 'confirm_button'}
+    playerData.clearButton = playerData.flow.add {
+        type = "button", name = "BPL_ClearButton",
+        caption = {"bpl.ClearButton"},
+        tooltip = {"bpl.ClearButtonTooltip"},
+        style = 'red_back_button'}
     UpdateGui(player_index)
 end
 
