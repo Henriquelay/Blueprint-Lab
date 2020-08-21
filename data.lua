@@ -6,7 +6,7 @@ data:extend({
 	},
 	{
 		type = "recipe",
-		name = "electric-energy-interface",
+		name = "bpl-electric-energy-interface",
 		energy_required = 1,
 		enabled = false,
 		ingredients = {},
@@ -14,7 +14,7 @@ data:extend({
 	},
 	{
 		type = "recipe",
-		name = "infinity-chest",
+		name = "bpl-infinity-chest",
 		energy_required = 1,
 		enabled = false,
 		ingredients = {},
@@ -22,10 +22,31 @@ data:extend({
 	},
 	{
 		type = "recipe",
-		name = "infinity-pipe",
+		name = "bpl-infinity-pipe",
 		energy_required = 1,
 		enabled = false,
 		ingredients = {},
 		result = "infinity-pipe"
+	},	{
+		type = "recipe",
+		name = "bpl-loader",
+		energy_required = 1,
+		enabled = false,
+		ingredients = {},
+		result = "loader"
+	},	{
+		type = "recipe",
+		name = "bpl-fast-loader",
+		energy_required = 1,
+		enabled = false,
+		ingredients = {},
+		result = "fast-loader"
+	},	{
+		type = "recipe",
+		name = "bpl-express-loader",
+		energy_required = 1,
+		enabled = false,
+		ingredients = {},
+		result = "express-loader"
 	},
 })

@@ -47,12 +47,12 @@ function ToTheLab(player_index)
 	SyncTechnologies(game.forces[playerData.force], game.forces[player.force.name])
 
     player.cheat_mode = true
-	player.force.recipes["electric-energy-interface"].enabled = true
-	player.force.recipes["infinity-chest"].enabled = true
-	player.force.recipes["infinity-pipe"].enabled = true
-	player.force.recipes["loader"].enabled = true
-    player.force.recipes["fast-loader"].enabled = true
-    player.force.recipes["express-loader"].enabled = true
+	player.force.recipes["bpl-electric-energy-interface"].enabled = true
+	player.force.recipes["bpl-infinity-chest"].enabled = true
+	player.force.recipes["bpl-infinity-pipe"].enabled = true
+	player.force.recipes["bpl-loader"].enabled = true
+    player.force.recipes["bpl-fast-loader"].enabled = true
+    player.force.recipes["bpl-express-loader"].enabled = true
     
 
     playerData.inTheLab = true
@@ -74,12 +74,12 @@ function ToTheWorld(player_index)
 	end
 
     player.cheat_mode = false
-	player.force.recipes["electric-energy-interface"].enabled = false
-	player.force.recipes["infinity-chest"].enabled = false
-	player.force.recipes["infinity-pipe"].enabled = false
-    player.force.recipes["loader"].enabled = false
-    player.force.recipes["fast-loader"].enabled = false
-    player.force.recipes["express-loader"].enabled = false
+	player.force.recipes["bpl-electric-energy-interface"].enabled = false
+	player.force.recipes["bpl-infinity-chest"].enabled = false
+	player.force.recipes["bpl-infinity-pipe"].enabled = false
+    player.force.recipes["bpl-loader"].enabled = false
+    player.force.recipes["bpl-fast-loader"].enabled = false
+    player.force.recipes["bpl-express-loader"].enabled = false
 
 
     DropBlueprints(player, player.get_main_inventory())
