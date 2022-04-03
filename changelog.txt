@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 2021-01-08
+  Changes:
+    - Update for 1.1.8
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 2020-08-25
+  Changes:
+    - updated settings selector to research the lab.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.1
 Date: 2020-08-21
   Bugfixes:
@@ -13,7 +23,7 @@ Date: 2020-08-16
   Changes:
     - new button styles
   Bugfixes:
-    - RSO compatibility on the lab. thanks to factorissimo2 and m
+    - RSO compatibility on the lab. thanks to factorissimo2 mod sources
     - Fix blank chunks generated.
 ---------------------------------------------------------------------------------------------------
 Version: 0.18.313
