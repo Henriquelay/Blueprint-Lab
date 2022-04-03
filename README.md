@@ -2,8 +2,15 @@
 [Factorio mod](https://mods.factorio.com/mod/BlueprintLab_design)
 Adds a way to enter a blueprints lab so you have a testbech for your blueprints.
 
-This is only an update from the original mod to make it work with latest vesions of +0.18.27 and make it more polished.
+This is a quickfix to correct a typo in the mod, as it has not been updated in over a year. 
 
-_If I can, I will add new features like the new shortcut buttons or a reaserch to enable it (because I like to research things)._
+###Licensing
+I would generally prefer to license GPLv3, however as this is a very simple typo correction only, this mod remains MIT. 
 
-This is my second or third mod and I dont know if I will have the necesary skills to keep it updated.
+Copyright 2022 Blu3wolf, daniel90c, minno, credomane, schoos76, Likos, canisin
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
