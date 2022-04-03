@@ -4,7 +4,7 @@ Adds a way to enter a blueprints lab so you have a testbech for your blueprints.
 
 This is a quickfix to correct a typo in the mod, as it has not been updated in over a year. 
 
-###Licensing
+### Licensing
 I would generally prefer to license GPLv3, however as this is a very simple typo correction only, this mod remains MIT. 
 
 Copyright 2022 Blu3wolf, daniel90c, minno, credomane, schoos76, Likos, canisin
