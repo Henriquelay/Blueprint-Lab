@@ -5,6 +5,8 @@ require "scripts.lab-effects"
 function InitAllPlayers()
     for _, player in pairs(game.players) do
         InitPlayer(player.index)
+        --player.print "loading lab."
+        UpdateGui(player.index)
     end
 end
 
@@ -38,8 +40,8 @@ end)
 
 script.on_configuration_changed(function(event)
     if event.mod_changes 
-        and event.mod_changes["TheBlueprintLab_bud"]
-        and event.mod_changes["TheBlueprintLab_bud"].old_version == "0.0.1" then
+        and event.mod_changes["TheBlueprintLab_bud"] then
+        --and event.mod_changes["TheBlueprintLab_bud"].old_version == "0.0.1" then
         ClearVersion001()
         InitAllPlayers()
     for _, player in pairs(game.players) do

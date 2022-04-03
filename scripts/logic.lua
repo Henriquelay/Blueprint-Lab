@@ -127,7 +127,7 @@ end
 function ReturnBlueprintImport(player, blueprint)
     if not blueprint then return end
 
-    if not player.clear_cursor() then
+    if not player.clean_cursor() then
         player.surface.spill_item_stack(player.position, player.cursor_stack)
     end
 
@@ -161,4 +161,5 @@ function ClearLab(player_index)
         DestroyTile(tile, player.surface)
     end
 	EquipLab(player.surface, player.force)
+	--ChartLabs()
 end
