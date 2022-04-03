@@ -1,10 +1,10 @@
 {
   "name": "BlueprintLab_design",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "factorio_version": "1.1",
   "title": "The Blueprint Designer Lab",
-  "author": "Bud, Likos, Schoos, daniel90c, minno",
-  "description": "Enter your lab to design your blueprints. Mod updated for the 4th by daniel90c. Please be gentle, the lab guy has been to places.",
-  "homepage": "https://gitlab.com/daniel90c/blueprintlab_design",
+  "author": "Bud, Likos, Schoos, daniel90c, minno, Blu3wolf",
+  "description": "Enter your lab to design your blueprints. Minor quickfix suggested by 4M_Peri",
+  "homepage": "https://github.com/Blu3wolf/Blueprint-Lab",
   "dependencies": ["base >= 1.1.8", "? miniloader >= 1.11.0"]
 }
