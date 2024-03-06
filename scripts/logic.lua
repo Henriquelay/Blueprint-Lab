@@ -157,7 +157,7 @@ function ClearLab(player_index)
     for _, entity in pairs(player.surface.find_entities()) do
 		DestroyEntity(entity, player_index)
     end
-    for _, tile in pairs(player.surface.find_tiles_filtered {has_hidden_tile = true}) do
+    for _, tile in pairs(player.surface.find_tiles_filtered {name = {"lab-dark-1", "lab-dark-2"}, invert = true}) do
         DestroyTile(tile, player.surface)
     end
 	EquipLab(player.surface, player.force)
