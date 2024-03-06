@@ -53,7 +53,11 @@ function DestroyDeconstructibleTileProxy(entity)
 end
 
 function DestroyTile(tile, surface)
-    surface.set_tiles {{name = tile.hidden_tile, position = tile.position}}
+    if (tile.position.x + tile.position.y) % 2 == 0 then
+        surface.set_tiles {{name = "lab-dark-1", position = tile.position}}
+    else
+        surface.set_tiles {{name = "lab-dark-2", position = tile.position}}
+    end
 end
 
 function IsBlueprintOrBook(itemStack)

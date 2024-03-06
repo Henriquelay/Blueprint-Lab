@@ -7,7 +7,7 @@ This is a quickfix to correct a typo in the mod, as it has not been updated in o
 ### Licensing
 I would generally prefer to license GPLv3, however as this is a very simple typo correction only, this mod remains MIT. 
 
-Copyright 2022 Blu3wolf, daniel90c, minno, credomane, schoos76, Likos, canisin
+Copyright 2022 Henriquelay, Blu3wolf, daniel90c, minno, credomane, schoos76, Likos, canisin
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
